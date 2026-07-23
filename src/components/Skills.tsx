@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Database, Network, Code2 } from 'lucide-react';
 import { config } from '../config';
@@ -5,16 +6,21 @@ import SectionHeader from './SectionHeader';
 
 const FALLBACK_ICONS: Record<string, typeof Code2> = {
   SQL: Database,
-  'REST API': Network,
+  'RESTful API': Network,
+  PostgreSQL: Database,
+  MySQL: Database,
 };
 
 function SkillIcon({ name, icon }: { name: string; icon: string }) {
-  if (icon) {
+  const [error, setError] = useState(false);
+
+  if (icon && !error) {
     return (
       <img
         src={`https://cdn.simpleicons.org/${icon}`}
-        alt=""
+        alt={name}
         loading="lazy"
+        onError={() => setError(true)}
         className="h-4 w-4 opacity-90"
       />
     );
