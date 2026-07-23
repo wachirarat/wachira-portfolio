@@ -44,7 +44,7 @@ export const config = {
   } as Record<string, string>,
   // วางไฟล์ resume.pdf ไว้ในโฟลเดอร์ public/
   resumeUrl: '/resume.pdf',
-  linkedin: '',
+  linkedin: 'https://www.linkedin.com/in/wachira-rataypaitak-52910723b/',
   location: 'Nonthaburi, Thailand',
   // จำนวน repo ที่จะแสดง (เรียงตาม updated ล่าสุด)
   maxRepos: 6,
