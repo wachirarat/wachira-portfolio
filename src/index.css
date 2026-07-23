@@ -6,6 +6,11 @@
   --font-display: 'Cinzel', 'Georgia', serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
 body {
   @apply bg-black text-zinc-300 antialiased;
   background-image:
