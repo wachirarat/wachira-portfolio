@@ -25,7 +25,7 @@ function SkillIcon({ name, icon }: { name: string; icon: string }) {
 
 export default function Skills() {
   return (
-    <section className="py-20">
+    <section id="skills" className="py-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

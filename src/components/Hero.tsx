@@ -4,8 +4,15 @@ import { config } from '../config';
 import type { GitHubProfile } from '../hooks/useGitHub';
 
 export default function Hero({ profile }: { profile: GitHubProfile | null }) {
+  const startYear = Math.min(
+    ...config.experience.map((e) => parseInt(e.year, 10))
+  );
+  const years = new Date().getFullYear() - startYear;
+  const companies = config.experience.length;
+  const techs = config.skills.length;
+
   return (
-    <section className="flex min-h-screen flex-col items-center justify-center text-center">
+    <section id="home" className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center text-center">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -27,7 +34,25 @@ export default function Hero({ profile }: { profile: GitHubProfile | null }) {
         <h2 className="mb-6 text-2xl font-medium text-zinc-400 md:text-3xl">
           {config.role}
         </h2>
-        <p className="mx-auto mb-10 max-w-xl text-zinc-400">{config.tagline}</p>
+        <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-300">
+          <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
+          Available for hire
+        </span>
+        <p className="mx-auto mb-6 max-w-xl text-zinc-400">{config.tagline}</p>
+        <div className="mb-8 flex gap-8">
+          <div>
+            <div className="text-2xl font-bold text-emerald-400">{years}+</div>
+            <div className="text-xs text-zinc-500">Years</div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold text-emerald-400">{companies}</div>
+            <div className="text-xs text-zinc-500">Companies</div>
+          </div>
+          <div>
+            <div className="text-2xl font-bold text-emerald-400">{techs}</div>
+            <div className="text-xs text-zinc-500">Techs</div>
+          </div>
+        </div>
 
         <div className="flex items-center justify-center gap-4">
           {profile && (

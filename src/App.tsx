@@ -1,4 +1,5 @@
 import Hero from './components/Hero';
+import Navbar from './components/Navbar';
 import About from './components/About';
 import Education from './components/Education';
 import Contact from './components/Contact';
@@ -22,8 +23,9 @@ export default function App() {
       </div>
       <Embers count={35} />
       <ScrollProgress />
+      <Navbar />
 
-      <main className="mx-auto max-w-5xl px-6">
+      <main className="mx-auto max-w-5xl px-6 pt-16">
         <Hero profile={github.profile} />
         <Divider />
         <About />

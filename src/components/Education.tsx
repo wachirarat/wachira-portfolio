@@ -5,7 +5,7 @@ import SectionHeader from './SectionHeader';
 
 export default function Education() {
   return (
-    <section className="py-20">
+    <section id="education" className="py-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
