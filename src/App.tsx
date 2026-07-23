@@ -7,7 +7,6 @@ import ScrollProgress from './components/ScrollProgress';
 import Divider from './components/Divider';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import LanguageStats from './components/LanguageStats';
 import Footer from './components/Footer';
 import { useGitHub } from './hooks/useGitHub';
 
@@ -32,8 +31,6 @@ export default function App() {
         <Education />
         <Divider />
         <Skills />
-        <Divider />
-        <LanguageStats languages={github.languages} loading={github.loading} />
         <Divider />
         <Projects repos={github.repos} loading={github.loading} error={github.error} />
         <Divider />
