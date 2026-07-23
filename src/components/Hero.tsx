@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Mail, ArrowDown, FileText } from 'lucide-react';
+import { Mail, ArrowDown, FileText } from 'lucide-react';
 import { config } from '../config';
 import type { GitHubProfile } from '../hooks/useGitHub';
 
@@ -54,30 +54,20 @@ export default function Hero({ profile }: { profile: GitHubProfile | null }) {
           </div>
         </div>
 
-        <div className="flex items-center justify-center gap-4">
-          {profile && (
-            <a
-              href={profile.html_url}
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center gap-2 rounded-full border border-emerald-300/60 bg-gradient-to-b from-emerald-300 to-emerald-500 px-6 py-3 font-medium text-black shadow-lg shadow-emerald-500/20 transition hover:from-emerald-200 hover:to-emerald-400"
-            >
-              <Github size={18} /> GitHub
-            </a>
-          )}
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="#contact"
+            className="flex items-center gap-2 rounded-full border border-emerald-300/60 bg-gradient-to-b from-emerald-300 to-emerald-500 px-8 py-3 font-medium text-black shadow-lg shadow-emerald-500/20 transition hover:from-emerald-200 hover:to-emerald-400"
+          >
+            <Mail size={18} /> Contact me
+          </a>
           <a
             href={config.resumeUrl}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 rounded-full border border-zinc-700 px-6 py-3 font-medium text-zinc-200 transition hover:border-emerald-400 hover:text-emerald-300"
+            className="flex items-center gap-2 rounded-full border border-zinc-700 px-8 py-3 font-medium text-zinc-200 transition hover:border-emerald-400 hover:text-emerald-300"
           >
-            <FileText size={18} /> Resume
-          </a>
-          <a
-            href="#contact"
-            className="flex items-center gap-2 rounded-full border border-zinc-700 px-6 py-3 font-medium text-zinc-200 transition hover:border-emerald-400 hover:text-emerald-300"
-          >
-            <Mail size={18} /> Contact
+            <FileText size={18} /> Download Resume
           </a>
         </div>
       </motion.div>
