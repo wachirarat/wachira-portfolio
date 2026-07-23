@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { config } from '../config';
 import { Star, GitFork, ExternalLink, Github, Loader2 } from 'lucide-react';
 import type { Repo } from '../hooks/useGitHub';
 import SectionHeader from './SectionHeader';
@@ -64,7 +65,7 @@ export default function Projects({
               {repo.name}
             </h4>
             <p className="mb-4 line-clamp-2 text-sm text-zinc-400">
-              {repo.description ?? 'No description'}
+              {config.projectDescriptions[repo.name] ?? repo.description ?? 'No description'}
             </p>
             <div className="flex flex-wrap items-center gap-2 text-xs">
               {repo.language && (

@@ -38,6 +38,9 @@ export const config = {
     { name: 'Agile / Scrum', icon: '' },
     { name: 'Low-Code', icon: '' },
   ],
+  projectDescriptions: {
+    // 'ชื่อ repo': 'คำอธิบายแบบกำหนดเอง',
+  } as Record<string, string>,
   // วางไฟล์ resume.pdf ไว้ในโฟลเดอร์ public/
   resumeUrl: '/resume.pdf',
   linkedin: '',
