@@ -39,7 +39,8 @@ export const config = {
     { name: 'Low-Code', icon: '' },
   ],
   projectDescriptions: {
-    // 'ชื่อ repo': 'คำอธิบายแบบกำหนดเอง',
+    'wachira-portfolio': 'Personal portfolio website built with React, Vite, TypeScript, and TailwindCSS to showcase my projects, skills, and experience.',
+    'wachirarat': 'GitHub profile README and personal repository.',
   } as Record<string, string>,
   // วางไฟล์ resume.pdf ไว้ในโฟลเดอร์ public/
   resumeUrl: '/resume.pdf',
