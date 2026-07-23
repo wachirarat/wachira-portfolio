@@ -49,7 +49,7 @@ export default function Hero({ profile }: { profile: GitHubProfile | null }) {
             <FileText size={18} /> Resume
           </a>
           <a
-            href={`mailto:${config.email}`}
+            href="#contact"
             className="flex items-center gap-2 rounded-full border border-zinc-700 px-6 py-3 font-medium text-zinc-200 transition hover:border-emerald-400 hover:text-emerald-300"
           >
             <Mail size={18} /> Contact
